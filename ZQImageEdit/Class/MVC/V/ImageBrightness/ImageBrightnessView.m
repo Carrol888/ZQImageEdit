@@ -48,7 +48,7 @@
     brightnessSlider.value = 0;
     brightnessSlider.minimumTrackTintColor =[UIColor colorWithRed:17 / 255.0 green:195 / 255.0 blue:236 / 255.0 alpha:1];
     
-    [brightnessSlider setThumbImage:[UIImage imageNamed:ZQImageName(@"Handle")] forState:UIControlStateNormal];
+    [brightnessSlider setThumbImage:[UIImage imageNamed:ZQImageName(@"Handle")]?:[UIImage imageNamed:ZQFrameworkImageName(@"Handle")] forState:UIControlStateNormal];
     
     [brightnessSlider addTarget:self action:@selector(sliderValueChage:) forControlEvents:UIControlEventValueChanged];
     [self addSubview:brightnessSlider];
@@ -78,7 +78,7 @@
     SaturationSlider.maximumValue = 1.5;
     SaturationSlider.value = 1;
     SaturationSlider.minimumTrackTintColor =[UIColor colorWithRed:17 / 255.0 green:195 / 255.0 blue:236 / 255.0 alpha:1];
-    [SaturationSlider setThumbImage:[UIImage imageNamed:ZQImageName(@"Handle")] forState:UIControlStateNormal];
+    [SaturationSlider setThumbImage:[UIImage imageNamed:ZQImageName(@"Handle")]?:[UIImage imageNamed:ZQFrameworkImageName(@"Handle")] forState:UIControlStateNormal];
     
     [SaturationSlider addTarget:self action:@selector(sliderValueChage:) forControlEvents:UIControlEventValueChanged];
     [self addSubview:SaturationSlider];
@@ -109,7 +109,7 @@
     ContrastSlider.maximumValue = 1.5;
     ContrastSlider.value = 1;
     ContrastSlider.minimumTrackTintColor =[UIColor colorWithRed:17 / 255.0 green:195 / 255.0 blue:236 / 255.0 alpha:1];
-    [ContrastSlider setThumbImage:[UIImage imageNamed:ZQImageName(@"Handle")] forState:UIControlStateNormal];
+    [ContrastSlider setThumbImage:[UIImage imageNamed:ZQImageName(@"Handle")]?:[UIImage imageNamed:ZQFrameworkImageName(@"Handle")] forState:UIControlStateNormal];
     
     [ContrastSlider addTarget:self action:@selector(sliderValueChage:) forControlEvents:UIControlEventValueChanged];
     [self addSubview:ContrastSlider];

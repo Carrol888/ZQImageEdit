@@ -36,7 +36,7 @@
     [self addSubview:_scrollView];
     
     
-    _addNewImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:ZQImageName(@"addWaterPring")]];
+    _addNewImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:ZQImageName(@"addWaterPring")]?:[UIImage imageNamed:ZQFrameworkImageName(@"addWaterPring")]];
     _addNewImageView.userInteractionEnabled = true;
     [_scrollView addSubview:_addNewImageView];
     

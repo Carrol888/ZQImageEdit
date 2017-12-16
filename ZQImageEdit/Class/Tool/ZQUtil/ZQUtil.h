@@ -14,7 +14,11 @@
 #define ZQBundleName @"ZQResource.bundle"
 
 #define ZQImageName(imageName) [ZQBundleName stringByAppendingPathComponent:imageName]
+#define ZQFrameworkImageName(file) [@"Frameworks/ZQImageEdit.framework/ZQResource.bundle" stringByAppendingPathComponent:file]
 
+#define ZQFontName(FontName) [ZQBundleName stringByAppendingPathComponent:FontName]
+
+#define ZQFrameworkFontName(FontName) [@"Frameworks/ZQImageEdit.framework/ZQResource.bundle" stringByAppendingPathComponent:FontName]
 
 
 //常用Block定义

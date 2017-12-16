@@ -36,7 +36,7 @@
     for (int i = 0; i<btnImages.count; i++) {
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, btnY, btnHeight, btnHeight)];
         
-        [button setImage:[UIImage imageNamed:ZQImageName(btnImages[i])] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:ZQImageName(btnImages[i])]?:[UIImage imageNamed:ZQFrameworkImageName(btnImages[i])] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(btnClickMethod:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         switch (i) {

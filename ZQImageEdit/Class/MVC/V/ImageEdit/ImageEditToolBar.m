@@ -40,7 +40,7 @@
         CGFloat btnX = (i + 1)*marginX + i * btnHeight;
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(btnX, marginY, btnHeight, btnHeight)];
         
-        [button setImage:[UIImage imageNamed:ZQImageName([self imageNames][i])] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:ZQImageName([self imageNames][i])]?:[UIImage imageNamed:ZQFrameworkImageName([self imageNames][i])] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(btnClickMethod:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         [self addSubview:button];
