@@ -36,14 +36,16 @@
     CGFloat imageHeight = self.bounds.size.height - 2*marginY;
     CGFloat imageWidth = imageHeight * 1.3f;
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(marginX, marginY, imageWidth, imageHeight)];
-    _imageView.image = [UIImage imageNamed:@"mosaicTestView"];
+    
+    _imageView.image = [UIImage imageNamed:ZQImageName(@"mosaicTestView")];
     _imageView.layer.borderWidth = 1.0f;
     _imageView.layer.borderColor = [UIColor blackColor].CGColor;
     _imageView.hidden = true;
     [self addSubview:_imageView];
     
     UIImageView *logo = [[UIImageView alloc] initWithFrame:CGRectMake(self.width - imageHeight - marginX, marginY, imageHeight, imageHeight)];
-    logo.image = [UIImage imageNamed:@"mosaicLogo"];
+    
+    logo.image = [UIImage imageNamed:ZQImageName(@"mosaicLogo")];
     logo.hidden = true;
     [self addSubview:logo];
     
@@ -65,8 +67,9 @@
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i*(buttonHeight + buttonMargin), 0, targetWidth , targetWidth)];
         button.layer.cornerRadius = targetWidth/2.0f;
         button.centerY = buttonView.height/2.0f;
-        [button setImage:[UIImage imageNamed:@"mosaic_size_normal"] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"mosaic_size_selected"] forState:UIControlStateSelected];
+      
+        [button setImage:[UIImage imageNamed:ZQImageName(@"mosaic_size_normal")] forState:UIControlStateNormal];
+        [button setImage:  [UIImage imageNamed:ZQImageName(@"mosaic_size_selected")] forState:UIControlStateSelected];
         button.layer.masksToBounds = true;
         if (i == 0) {
             button.selected = true;

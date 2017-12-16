@@ -34,13 +34,15 @@
     self.backgroundColor = [ZQUtil R:131 G:128 B:118 A:1];
     
     UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, 30, 30)];
-    [backBtn setImage:[UIImage imageNamed:@"viewBackButton"] forState:UIControlStateNormal];
+    
+    [backBtn setImage:[UIImage imageNamed:ZQImageName(@"viewBackButton")] forState:UIControlStateNormal];
     backBtn.centerY = 42;
     [backBtn addTarget:self action:@selector(backMethod) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:backBtn];
     
     UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(self.width - 40, 0, 30, 30)];
-    [saveButton setImage:[UIImage imageNamed:@"imageEdit_save"] forState:UIControlStateNormal];
+    
+    [saveButton setImage:[UIImage imageNamed:ZQImageName(@"imageEdit_save")] forState:UIControlStateNormal];
     saveButton.centerY = 42;
     [saveButton addTarget:self action:@selector(saveMethod) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:saveButton];

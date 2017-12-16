@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// 图片路径resource.bundle
+
+#define ZQBundleName @"ZQResource.bundle"
+
+#define ZQImageName(imageName) [ZQBundleName stringByAppendingPathComponent:imageName]
+
 
 
 //常用Block定义

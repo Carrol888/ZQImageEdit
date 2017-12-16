@@ -39,7 +39,8 @@
     for (int i = 0; i<[self imageNames].count; i ++) {
         CGFloat btnX = (i + 1)*marginX + i * btnHeight;
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(btnX, marginY, btnHeight, btnHeight)];
-        [button setImage:[UIImage imageNamed:[self imageNames][i]] forState:UIControlStateNormal];
+        
+        [button setImage:[UIImage imageNamed:ZQImageName([self imageNames][i])] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(btnClickMethod:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         [self addSubview:button];
